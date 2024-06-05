@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combined HTML Pages</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- Loop through each page -->
+<div id="page1"></div>
+<div id="page2"></div>
+<div id="page3"></div>
+<div id="page4"></div>
+<div id="page5"></div>
+<div id="page6"></div>
+<div id="page7"></div>
+<div id="page8"></div>
+<div id="page9"></div>
+<div id="page10"></div>
+<div id="page11"></div>
+<div id="page12"></div>
+<div id="page13"></div>
+<div id="page14"></div>
+<div id="page15"></div>
+<div id="page16"></div>
+<div id="page17"></div>
+<div id="page18"></div>
+<div id="page19"></div>
+<!-- Continue adding divs up to page20 -->
+<div id="page20"></div>
+
+<script>
+$(function(){
+    for (let i = 1; i <= 20; i++) {
+        $("#page" + i).load(i + ".html"); // Assumes files are named 1.html, 2.html, ..., 20.html
+    }
+});
+</script>
+
+</body>
+</html>
+

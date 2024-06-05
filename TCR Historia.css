@@ -1,0 +1,60 @@
+body {
+  font-family: Verdana,Tahoma, sans-serif; 
+  background: linear-gradient(55deg, red, yellow, white, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.flip-card { 
+  background: transparent;
+  width: 360px;
+  height:420px;
+  perspective: 1000px; /* Perspective view for 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(900deg); /* Rotate the inner card on hover */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side when facing away */
+}
+
+.flip-card-front {
+  background: linear-gradient(55deg, red, yellow, white, black);
+  color: rgb(31, 142, 14);
+}
+
+.flip-card-back {
+  background: linear-gradient(55deg, red, yellow, white, black);
+  color: rgb(255, 0, 0);
+  text-align: center;
+  transform: rotateY(180deg); /* Rotate the back side to be the reverse of the front */
+}
+
+i {
+  font-size: 30px;
+  padding-left: 80px;
+  cursor: pointer;
+}
+i .fa-facebook-square{
+  padding-left: 0%;
+  color:color(srgb red green blue); 
+}
+

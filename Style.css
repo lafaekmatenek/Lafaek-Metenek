@@ -1,0 +1,279 @@
+*
+{
+    padding: 0%;
+    margin: 0%;   
+    box-sizing: border-box;
+    
+}
+:root {
+ --gradient: linear-gradient(75deg, #e20c0c, yellow, white, black);
+}
+body {
+    margin: 0cm;
+    padding: 50px;
+    background-image: var(--gradient);
+    background-size: 200% 100% ; /* Increase the size to allow movement */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: Gradient-animation 10s infinite alternate; /* Slower animation for smoother effect */
+}
+.menu-bar {
+    width: auto;
+    padding: 5px;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), #eeff00, rgb(255, 255, 255), rgb(0, 0, 0));
+    text-align: center;
+    background-size: 200% 100%; /* Increase the size to allow movement */
+    background-image: var(--gradient);
+    animation: Gradient-animation 3s infinite alternate; /* Slower animation for smoother effect */
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: rgb(0, 0, 0);
+}
+@keyframes Gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Start from the left */
+    }
+    100% {
+        background-position: 100% 50%; /* Move to the right */
+    }
+}
+
+@keyframes colorScaleAnimation {
+     
+    0% {
+        color: #ffffff;
+        transform: scale(1);
+    }
+    50% {
+        color: #ff0000;
+        transform: scale(1.1);
+    }
+    100% {
+        color: #ffffff;
+        transform: scale(1);
+    }
+}
+.menu-bar ul li {
+    max-width: max-content;
+    margin: 7px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.5s ease; /* Smooth transition for hover effects */
+    animation: colorScaleAnimation 3s infinite; /* Apply the animation */
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #ff0000;
+}
+.active, .menu-bar ul li:hover{
+    background:linear-gradient(20deg , yellow, red);
+    border-radius: 3px;
+    animation: none; /* Stop animation on hover */
+}
+.sub-menu-1 
+{
+    display: none;
+    position: relative;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(102, 0, 0);
+    border-radius: 5px;
+    margin: 5px ;
+}
+.menu-bar ul li:hover .sub-menu-1 ul 
+{
+    display: block;
+    margin: 1%;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 290px;
+    padding: 1%;
+    border-bottom: 2px dotted #ffffff;
+    background: transparent;
+    text-align: center;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    position: relative;
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: rgb(251, 255, 0);
+}
+
+.LF {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out forwards;
+    width: 200px;
+    height: 60px;
+}
+.HOME {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    @keyframes slideInFromLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    text-align:left;
+    position: absolute;
+
+}
+.WELCOME {
+    animation: fadeIn 2s ease-in-out;
+    font-size: 70;
+    text-align: left;   
+    margin-top: 25px;
+    color:rgba(255, 0, 0, 0.842);
+    font-family: system-ui, -apple-system,'Roboto', 'Oxygen';
+}
+.lafaek {
+    font-size: 70;
+    margin-top: -10;
+    text-align: left;
+    color:white;
+    font-family: system-ui, -apple-system,'Roboto', 'Oxygen';
+
+}
+.lafaekTimor {
+   font-size: 70;
+   text-align: left;
+   color: #000000;
+   animation: fadeInColor 3s ease-in-out;
+   @keyframes fadeInColor {
+       0% { opacity: 0; }
+       100% { opacity: 1; }
+   }
+}
+.BANDEIRA {
+   height: 100px;
+   width: 130;
+   border-radius: 10px;
+   z-index: -1;
+   position: absolute;
+   
+}
+@media (max-width= 600) {
+        .WELCOME{
+            font-size: 12px;
+            line-height: 50px;
+        }
+        .lafaek{
+            font-size: 12px;
+            line-height: 12px;
+        }
+        .lafaekTimor{
+            font-size: 15px;
+            line-height: 12px;
+        }
+        .BANDEIRA{
+            border-radius: 10px;
+            position: relative;
+        }
+        body {
+            margin: 0cm;
+            padding: 50px;
+            background-size: auto; /* Increase the size to allow movement */
+        }
+.menu-bar {
+    background-image: linear-gradient(to right, rgb(255, 0, 0), #eeff00, rgb(255, 255, 255), rgb(0, 0, 0));
+    text-align: center;
+    background-size: 200% 200%; /* Increase the size to allow movement */
+    background-image: var(--gradient);
+    animation: Gradient-animation 3s infinite alternate; /* Slower animation for smoother effect */
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: rgb(84, 27, 157);
+}
+@keyframes Gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Start from the left */
+    }
+    100% {
+        background-position: 100% 50%; /* Move to the right */
+    }
+}
+
+@keyframes colorScaleAnimation {
+     
+    0% {
+        color: #ffffff;
+        transform: scale(1);
+    }
+    50% {
+        color: #ff0000;
+        transform: scale(1.1);
+    }
+    100% {
+        color: #ffffff;
+        transform: scale(1);
+    }
+}
+.menu-bar ul li {
+    max-width: max-content;
+    margin: 7px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.5s ease; /* Smooth transition for hover effects */
+    animation: colorScaleAnimation 3s infinite; /* Apply the animation */
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #15ff00;
+}
+.active, .menu-bar ul li:hover{
+    background:linear-gradient(20deg , yellow, red);
+    border-radius: 3px;
+    animation: none; /* Stop animation on hover */
+}
+.sub-menu-1 
+{
+    display: none;
+    position: relative;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: rgb(41, 14, 147);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul 
+{
+    display: block;
+    margin: 1%;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 250px auto;
+    padding: 1%;
+    border-bottom: 2px dotted #fff;
+    background: transparent;
+    text-align: center;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    position: relative;
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: rgb(255, 0, 0);
+}
+
+}
+
